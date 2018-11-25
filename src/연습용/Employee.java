@@ -59,7 +59,7 @@ public class Employee {
 		}
 
 		public void setEmpName() {
-			
+			//
 		}
 
 		public void setSalary() {

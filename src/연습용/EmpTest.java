@@ -25,8 +25,8 @@ public class EmpTest {
 			
 			switch(m_num) {
 			case 1 : a1.empInput(); break;
-			case 2 : System.out.println("새 이름을 입력하세요"); String newName = scanner.next(); a1.setName(newName); break;
-			case 3 : modifyMenu(); break;
+			case 2 : modifyMenu(); break;
+			case 3 :  break;
 			case 4 : a1.empOutput(); break;
 			case 9 : break;
 			}
