@@ -35,7 +35,7 @@ public class Employee {
 			System.out.print("핸드폰 번호 : ");
 			phone = scanner.next();
 			System.out.print("주소 : ");
-			address = scanner.nextLine();
+			scanner.nextLine();
 			address = scanner.nextLine();
 			System.out.println();
 		}
@@ -58,19 +58,28 @@ public class Employee {
 			// 필드 값 변경용 메소드
 		}
 
-		public void setEmpName() {
-			//
+		public String setEmpName() {
+			System.out.print("이름 : ");
+			empName = scanner.next();
+			return empName;
 		}
 
-		public void setSalary() {
+		public int setSalary() {
+			System.out.print("급여 : ");
+			salary = scanner.nextInt();
+			return salary;
 			
 		}
 
-		public void setDept() {
-			
+		public String setDept() {
+			System.out.print("소속부서 : ");
+			dept = scanner.next();
+			return dept;
 		}
 
-		public void setJob() {
-			
+		public String setJob() {
+			System.out.print("직급 : ");
+			job = scanner.next();
+			return job;
 		}
 }
