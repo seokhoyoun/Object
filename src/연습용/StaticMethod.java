@@ -23,4 +23,12 @@ public class StaticMethod {
 	public static void setChar(String value) {
 		
 	}
+	
+	public static int valueLength() {
+		return 0;
+	}
+	
+	public static String valueConcat(String value) {
+		return null;
+	}
 }
