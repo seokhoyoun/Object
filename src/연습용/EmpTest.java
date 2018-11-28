@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class EmpTest {
 	
+	private static Employee a1 = new Employee();
 	public static void mainMenu() {
-		Employee a1 = new Employee();
 		Scanner scanner = new Scanner(System.in);
 		 int m_num;
 		do {
@@ -14,7 +14,7 @@ public class EmpTest {
 					"	1. 새 사원 정보 입력\r\n" + 
 					"	2. 사원 정보 수정 \r\n" + 
 					"	3. 사원 정보 삭제\r\n" + 
-					"	4. 사원정보 출력 \r\n" + 
+					"	4. 사원 정보 출력 \r\n" + 
 					"	9. 끝내기 \r\n"
 					+ "	메뉴 번호 입력 : ");
 					m_num = scanner.nextInt();
@@ -22,7 +22,7 @@ public class EmpTest {
 			switch(m_num) {
 			case 1 : a1.empInput(); break;
 			case 2 : modifyMenu(); break;
-			case 3 :  break;
+			case 3 : break;
 			case 4 : a1.empOutput(); break;
 			case 9 : break;
 			}
@@ -30,7 +30,6 @@ public class EmpTest {
 	}
 	
 	public static void modifyMenu() {
-		Employee a1 = new Employee();
 		Scanner scanner = new Scanner(System.in); int m_num;
 		do {
 			System.out.print("	**** 사원 정보 수정 메뉴 *****\r\n" + 
