@@ -39,5 +39,16 @@ public class Book {
 			this.author = author;
 		}
 		
-		
+		public String getTitle() {
+			return title;
+		}
+		public int getPrice() {
+			return price;
+		}
+		public double getDR() {
+			return discountRate;
+		}
+		public String getAuthor() {
+			return author;
+		}
 }

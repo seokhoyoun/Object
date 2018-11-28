@@ -30,16 +30,13 @@ public class Customer {
 	public Customer() {
 		// 생성자와 메소드 안에는 this 레퍼런스가 존재한다.
 		// 해당 생성자나 메소드가 사용될 때, this 가 자동으로 주소를 전달받는다.
-		System.out.println(this.hashCode());
 	}
 	// 매개변수가 있는 생성자
 	public Customer(int id, String name) { // 필드와는 다른 변수이다.
-		System.out.println(this.hashCode());
 		this.id = id;
 		this.name = name;
 	}
 	public Customer(int id, String name,int age, char gender, String phone, String address, double point) {
-		System.out.println(this.hashCode());
 		this.id = id;
 		this.name = name;
 		this.age = age;
@@ -53,8 +50,55 @@ public class Customer {
 	// 접근제한자 반환자료형 메소드명([자료형 변수]){}
 	
 	public void printCustomer() {
-		System.out.println("printCustomer : " + this.hashCode());
 		System.out.println(this.id + ","+ this.name +","+ this.age+","+this.gender+","+this.phone+","+this.address+","+this.point);
 	}
+	
+	// setter : set 메소드
+	// public void set필드명(자료형 변수){필드명 = 변수;}
+	public void setID(int id) {
+		this.id = id;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public void setPoint(double point) {
+		this.point = point;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	// Getter : get 메소드
+	public int getID() {
+		return this.id;
+	}
+	public String getName() {
+		return this.name;
+	}
+	public char getGender() {
+		return this.gender;
+	}
+	public String getPhone() {
+		return this.phone;
+	}
+	public String getAddress() {
+		return this.address;
+	}
+	public double getPoint() {
+		return this.point;
+	}
+	public int getAge() {
+		return this.age;
+	}
+	
 	
 }
