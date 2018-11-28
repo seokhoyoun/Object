@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 public class EmpTest {
 	
-	static Employee a1 = new Employee();
+	static Employee e1 = new Employee();
+	
 	public static void mainMenu() {
 		Scanner scanner = new Scanner(System.in);
 		 int m_num;
 		do {
-			System.out.print("	******* 사원 정보 관리 프로그램 ************\r\n" + 
+			System.out.print("\n	******* 사원 정보 관리 프로그램 ************\r\n" + 
 					"\r\n" + 
 					"	1. 새 사원 정보 입력\r\n" + 
 					"	2. 사원 정보 수정 \r\n" + 
@@ -20,10 +21,10 @@ public class EmpTest {
 					m_num = scanner.nextInt();
 			
 			switch(m_num) {
-			case 1 : a1.empInput(); break;
+			case 1 : e1.empInput(); break;
 			case 2 : modifyMenu(); break;
-			case 3 :  break;
-			case 4 : a1.empOutput(); break;
+			case 3 : e1 = new Employee(); break;
+			case 4 : e1.empOutput(); break;
 			case 9 : break;
 			}
 		}while(m_num != 9);
@@ -32,19 +33,20 @@ public class EmpTest {
 	public static void modifyMenu() {
 		Scanner scanner = new Scanner(System.in); int m_num;
 		do {
-			System.out.print("	**** 사원 정보 수정 메뉴 *****\r\n" + 
-					"	1. 이름 변경 => setEmpName()\r\n" + 
-					"	2. 급여 변경 => setSalary()\r\n" + 
-					"	3. 부서 변경 => setDept()\r\n" + 
-					"	4. 직급 변경 => setJob()\r\n" + 
-					"	5. 이전 메뉴로 이동 => return 처리할 것");
+			System.out.print("\n	**** 사원 정보 수정 메뉴 *****\r\n" + 
+					"	1. 이름 변경 \r\n" + 
+					"	2. 급여 변경 \r\n" + 
+					"	3. 부서 변경 \r\n" + 
+					"	4. 직급 변경 \r\n" + 
+					"	5. 이전 메뉴로 이동 "
+					+ "메뉴 번호 입력 : ");
 			m_num = scanner.nextInt();
 			
 			switch(m_num){
-			case 1 : a1.setEmpName(); break;
-			case 2 : a1.setSalary(); break;
-			case 3 : a1.setDept(); break;
-			case 4 : a1.setJob(); break;
+			case 1 : System.out.print("\n변경 할 이름을 입력하세요 : "); e1.setEmpName(scanner.next()); break;
+			case 2 : System.out.print("\n변경 할 급여를 입력하세요 : "); e1.setSalary(scanner.nextInt()); break;
+			case 3 : System.out.print("\n변경 할 부서를 입력하세요 : "); e1.setDept(scanner.next()); break;
+			case 4 : System.out.print("\n변경 할 직급을 입력하세요 : "); e1.setJob(scanner.next()); break;
 			case 5 : return;
 			}
 		}while(m_num != 5);

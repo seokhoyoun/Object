@@ -16,18 +16,23 @@ public class Employee {
 	private String address;
 	
 		public Employee() {
-			empNo = 0;
-			empName = null;
-			dept = null; // 소속 부서
-			job= null; // 직급
-			age= 0;
-			gender = ' ';
-			salary= 0;
-			bonusPoint= 0;
-			phone = null;
-			address = null;
+			
 		}
 	
+		public Employee(int empNo, String empName, String dept, String job, int age, char gender, int salary,
+				double bonusPoint, String phone, String address) {
+			this.empNo = empNo;
+			this.empName = empName;
+			this.dept = dept;
+			this.job = job;
+			this.age = age;
+			this.gender = gender;
+			this.salary = salary;
+			this.bonusPoint = bonusPoint;
+			this.phone = phone;
+			this.address = address;
+		}
+
 		public void empInput() {
 			System.out.print("사번 : ");
 			empNo = scanner.nextInt();
@@ -54,45 +59,104 @@ public class Employee {
 		}
 		
 		public void empOutput() {
-			System.out.println(empNo);
-			System.out.println(empName);
-			System.out.println(dept);
-			System.out.println(job);
-			System.out.println(age);
-			System.out.println(gender);
-			System.out.println(salary);
-			System.out.println(bonusPoint);
-			System.out.println(phone);
-			System.out.println(address);
-		}
-		
-		public String setName(String newName) {//이름 변경용
-			return newName;
-			// 필드 값 변경용 메소드
+			System.out.println("사번 : "+empNo);
+			System.out.println("사원 이름 : "+empName);
+			System.out.println("부서 : "+dept);
+			System.out.println("직급 : "+job);
+			System.out.println("나이 : "+age);
+			System.out.println("성별 : "+gender);
+			System.out.println("급여 : "+ salary);
+			System.out.println("포인트 : "+ bonusPoint);
+			System.out.println("전화번호 : "+phone);
+			System.out.println("주소 : "+address);
 		}
 
-		public String setEmpName() {
-			System.out.print("이름 : ");
-			empName = scanner.next();
+		public Scanner getScanner() {
+			return scanner;
+		}
+
+		public void setScanner(Scanner scanner) {
+			this.scanner = scanner;
+		}
+
+		public int getEmpNo() {
+			return empNo;
+		}
+
+		public void setEmpNo(int empNo) {
+			this.empNo = empNo;
+		}
+
+		public String getEmpName() {
 			return empName;
 		}
 
-		public int setSalary() {
-			System.out.print("급여 : ");
-			salary = scanner.nextInt();
-			return salary;
-			
+		public void setEmpName(String empName) {
+			this.empName = empName;
 		}
 
-		public String setDept() {
-			System.out.print("소속부서 : ");
-			dept = scanner.next();
+		public String getDept() {
 			return dept;
 		}
 
-		public String setJob() {
-			System.out.print("직급 : ");
-			job = scanner.next();
+		public void setDept(String dept) {
+			this.dept = dept;
+		}
+
+		public String getJob() {
 			return job;
 		}
+
+		public void setJob(String job) {
+			this.job = job;
+		}
+
+		public int getAge() {
+			return age;
+		}
+
+		public void setAge(int age) {
+			this.age = age;
+		}
+
+		public char getGender() {
+			return gender;
+		}
+
+		public void setGender(char gender) {
+			this.gender = gender;
+		}
+
+		public int getSalary() {
+			return salary;
+		}
+
+		public void setSalary(int salary) {
+			this.salary = salary;
+		}
+
+		public double getBonusPoint() {
+			return bonusPoint;
+		}
+
+		public void setBonusPoint(double bonusPoint) {
+			this.bonusPoint = bonusPoint;
+		}
+
+		public String getPhone() {
+			return phone;
+		}
+
+		public void setPhone(String phone) {
+			this.phone = phone;
+		}
+
+		public String getAddress() {
+			return address;
+		}
+
+		public void setAddress(String address) {
+			this.address = address;
+		}
+		
 }

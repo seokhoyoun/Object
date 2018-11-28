@@ -25,6 +25,15 @@ public class TestProduct {
 		System.out.println("상품명 : "+p1.getProductName());
 		System.out.println("부가세 포함 가격 : "+ t_price);
 		
+		System.out.println();
+		System.out.println("상품명 : "+p2.getProductName());
+		System.out.println("부가세 포함 가격 : "+ (int)(p2.getPrice()+(p2.getPrice()*p2.getTax())));
+		
+		System.out.println();
+		System.out.println("상품명 : "+p3.getProductName());
+		System.out.println("부가세 포함 가격 : "+ (int)(p3.getPrice()+(p3.getPrice()*p3.getTax())));
+		
+		
 		
 		
 	}
