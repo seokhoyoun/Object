@@ -30,7 +30,7 @@ public class EmpTest {
 			switch(m_num) {
 			case 1 : e1.empInput(); break;
 			case 2 : modifyMenu(e1); break;
-			case 3 : e1 = new Employee(); break; // 주소값이 달라지므로 변경 필요
+			case 3 : e1.setInit(); break; // 주소값이 달라지므로 변경 필요 - (완료)
 			case 4 : e1.empOutput(); break;
 			case 9 : break;
 			}
