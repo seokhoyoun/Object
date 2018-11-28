@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class EmpTest {
 	
-	private static Employee a1 = new Employee();
+	static Employee a1 = new Employee();
 	public static void mainMenu() {
 		Scanner scanner = new Scanner(System.in);
 		 int m_num;
@@ -22,7 +22,7 @@ public class EmpTest {
 			switch(m_num) {
 			case 1 : a1.empInput(); break;
 			case 2 : modifyMenu(); break;
-			case 3 : break;
+			case 3 :  break;
 			case 4 : a1.empOutput(); break;
 			case 9 : break;
 			}

@@ -15,6 +15,19 @@ public class Employee {
 	private String phone;
 	private String address;
 	
+		public Employee() {
+			empNo = 0;
+			empName = null;
+			dept = null; // 소속 부서
+			job= null; // 직급
+			age= 0;
+			gender = ' ';
+			salary= 0;
+			bonusPoint= 0;
+			phone = null;
+			address = null;
+		}
+	
 		public void empInput() {
 			System.out.print("사번 : ");
 			empNo = scanner.nextInt();
