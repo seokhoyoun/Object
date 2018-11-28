@@ -5,7 +5,10 @@ public class NonStaticSample {
 	public static void main(String[] args) {
 		NonStaticSample n1 = new NonStaticSample();
 //		n1.printLottoNumbers();
-		n1.outPutChar(5, 'A');
+//		n1.outPutChar(5, 'A');
+//		System.out.println(n1.alphabette());
+		String text = n1.mySubstring("abcdefghijk", 2, 5);
+		System.out.println(text);
 	}
 	
 	public NonStaticSample() {
@@ -38,8 +41,19 @@ public class NonStaticSample {
 		}
 	}
 
-	public char alphabette() {
-		
-		
+	public char alphabette() { //65 ~ 122
+		//실행 요청시 알파벳 범위의 임의의 영문자를 하나 발생시켜 리턴하는 메소드
+		char r_ch = (char)((int)(Math.random()*(26))+65);
+		return r_ch;
 	}
+	public String mySubstring(String text, int i1, int i2) {
+		if(text == null) {
+			return null;
+		}
+		else {
+			return text.substring(i1, i2);
+			
+		}
+	}
+	
 }

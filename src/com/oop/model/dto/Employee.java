@@ -1,9 +1,10 @@
-package 연습용;
+package com.oop.model.dto;
 
 import java.util.Scanner;
 
 public class Employee {
 	private Scanner scanner = new Scanner(System.in);
+	
 	private int empNo;
 	private String empName;
 	private String dept; // 소속 부서
@@ -70,6 +71,21 @@ public class Employee {
 			System.out.println("전화번호 : "+phone);
 			System.out.println("주소 : "+address);
 		}
+		
+		public void setInit() {
+			this.empNo = 0;
+			this.empName = null;
+			this.dept = null;
+			this.job = null;
+			this.age = 0;
+			this.gender = '\u0000';
+			this.salary = 0;
+			this.bonusPoint = 0;
+			this.phone = null;
+			this.address = null;
+		}
+
+	
 
 		public int getEmpNo() {
 			return empNo;
@@ -152,3 +168,4 @@ public class Employee {
 		}
 		
 }
+
