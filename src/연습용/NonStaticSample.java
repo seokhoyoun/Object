@@ -7,8 +7,14 @@ public class NonStaticSample {
 //		n1.printLottoNumbers();
 //		n1.outPutChar(5, 'A');
 //		System.out.println(n1.alphabette());
-		String text = n1.mySubstring("abcdefghijk", 2, 5);
-		System.out.println(text);
+//		String text = n1.mySubstring("abcdefghijk", 2, 5);
+//		System.out.println(text);
+		int[] address = n1.intArrayAllocation(5);
+		n1.display(address);
+		n1.swap(address, 0, 3);
+		n1.display(address);
+		n1.sortDescending(address);
+		n1.display(address);
 	}
 	
 	public NonStaticSample() {
@@ -46,6 +52,7 @@ public class NonStaticSample {
 		char r_ch = (char)((int)(Math.random()*(26))+65);
 		return r_ch;
 	}
+	
 	public String mySubstring(String text, int i1, int i2) {
 		if(text == null) {
 			return null;
@@ -55,5 +62,49 @@ public class NonStaticSample {
 			
 		}
 	}
+
+	public int[] intArrayAllocation(int num) {
+		// int 한개의 전달값을 받아서, 배열의 주소를 리턴하는 메소드
+		int[] rar = new int[num];
+		for(int i = 0; i < rar.length; i++) {
+			rar[i] = (int)(Math.random()*100)+1;
+				if(i > 0) {
+					for(int j = 0; j < i; j++) {
+						if(rar[i] == rar[j]) {
+							i--;
+						}
+					}
+				}
+		}
+			return rar;
+			
+		
+		
+	}
 	
+	public void display(int[] rar) {
+		for(int i = 0; i < rar.length; i++) {
+			System.out.print(rar[i]+"\t");
+		}
+		System.out.println();
+		
+	}
+
+	public void swap(int[] rar, int n1, int n2) {
+		// 배열과, 두 정수의 인덱스를 전달받아 두 인덱스의 값을 교환함
+		int tmp = rar[n1];
+		rar[n1] = rar[n2];
+		rar[n2] = tmp;
+	}
+	
+	public void sortDescending(int[] rar) {
+		// 처리할 내용 : 위에서 작성한 swap 메소드를 이용하여 배열의 값 들을 내림차순 정렬 처리함
+		for(int i = 0; i < rar.length-1; i++) {
+			for(int j = i+1; j < rar.length; j++) {
+				if(rar[i] < rar[j]) {
+					swap(rar, i , j);
+				}
+			}
+		}
+	}
 }
