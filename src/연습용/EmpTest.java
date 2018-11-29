@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class EmpTest {
 	
-	static Employee e1 = new Employee();
 	
 	public static void mainMenu() {
+		Employee e1 = new Employee();
 		Scanner scanner = new Scanner(System.in);
 		 int m_num;
 		do {
@@ -22,15 +22,15 @@ public class EmpTest {
 			
 			switch(m_num) {
 			case 1 : e1.empInput(); break;
-			case 2 : modifyMenu(); break;
-			case 3 : e1 = new Employee(); break;
+			case 2 : modifyMenu(e1); break;
+			case 3 : break;
 			case 4 : e1.empOutput(); break;
 			case 9 : break;
 			}
 		}while(m_num != 9);
 	}
 	
-	public static void modifyMenu() {
+	public static void modifyMenu(Employee e1) {
 		Scanner scanner = new Scanner(System.in); int m_num;
 		do {
 			System.out.print("\n	**** 사원 정보 수정 메뉴 *****\r\n" + 
