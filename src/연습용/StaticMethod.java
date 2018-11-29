@@ -37,7 +37,7 @@ public class StaticMethod {
 			//value 필드에서 전달받은 인덱스 위치의 값을 전달받은 문자로 변경하는 static 메소드
 			public static void setChar(int index, char ch) {
 				// StaticMethod.value.charAt(index) = ch; * 컴파일오류 : 자바에서 문자열은 immutable이라 값을 바꿀수 없다
-				StaticMethod.value = StaticMethod.value.substring(0, index)+ ch + StaticMethod.value.substring(index, StaticMethod.value.length());
+				StaticMethod.value = StaticMethod.value.substring(0, index)+ ch + StaticMethod.value.substring(index+1);
 				
 			}
 			
