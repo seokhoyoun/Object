@@ -15,6 +15,10 @@ public class NonStaticSample {
 		n1.display(address);
 		n1.sortDescending(address);
 		n1.display(address);
+		n1.sortAscending(address);
+		n1.display(address);
+		int sum = n1.totalValue(0, 10);
+		System.out.println(sum);
 	}
 	
 	public NonStaticSample() {
@@ -106,5 +110,56 @@ public class NonStaticSample {
 				}
 			}
 		}
+	}
+	
+	public void sortAscending(int[] rar) {
+		// 오름차순 정렬
+		for(int i = 0; i < rar.length-1; i++) {
+			for(int j = i+1; j < rar.length; j++) {
+				if(rar[i] > rar[j]) {
+					swap(rar, i, j);
+				}
+			}
+		}
+	}
+
+	public int countChar(String text, char key) {
+		// 문자열과 문자 하나를 전달받아, 문자열에 포함된 문자의 갯수를 리턴하는 메소드, 포함 된 문자가 없으면 0을 반환
+		int sum = 0;
+		for(int i = 0; i < text.length(); i++) {
+			if(text.charAt(i) == key) {
+				sum++;
+			}
+		} return sum;
+	}
+
+	public int totalValue(int num1, int num2) {
+		// 정수 두 개를 전달받아, 두 수 중 작은 값에서 큰 값사이의 정수들의 합계를 구해서 리턴하는 메소드
+		int sum = 0;
+		if(num1 > num2) {
+			for(int i = num2; i <= num1; i++) {
+				sum += i;
+			}
+			return sum;
+		}
+		else if(num1 < num2) {
+			for(int i = num1; i <= num2; i++) {
+				sum += i;
+			}
+			return sum;
+		}
+		else {
+			return sum;
+		}
+	}
+
+	public char pCharAt(String text, int index) {
+		// 문자열과 인덱스를 전달받아, 그 위치의 문자를 리턴하는 메소드
+		char ch = text.charAt(index);
+		return ch;
+	}
+
+	public String pConcat(String text, String text2) {
+		return text.concat(text2);
 	}
 }
