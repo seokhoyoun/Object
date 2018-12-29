@@ -13,9 +13,11 @@ public class Rectangle {
 	
 	@Override
 	public boolean equals(Object o) {
-		
+		Rectangle r = (Rectangle) o;
+		if(this.lowerRight.equals(r.lowerRight) && this.upperLeft.equals(r.upperLeft)) 
+			return true;
+		else
+			return false;
 	}
-	
-	
 	
 }
